@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Handmade Crochet Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container topbar">
+    <div class="brand">
+      <b>Handmade Crochet</b>
+      <span>Cozy • Custom • Gift-ready</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <h1>Handmade crochet pieces, made with care.</h1>
+      <p>Simple store to showcase your products. Customers order via WhatsApp / Instagram. You add products by copy-paste.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="shop.html">Open Shop</a>
+        <a class="btn btn-ghost" href="contact.html">Order / Contact</a>
+      </div>
+      <div class="badges">
+        <span class="badge">100% Free Hosting</span>
+        <span class="badge">No payments needed</span>
+        <span class="badge">Mobile friendly</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin:0 0 6px">How it works</h2>
+      <p style="margin:0;color:var(--muted)">
+        1) Browse products<br/>
+        2) Click “Order on WhatsApp”<br/>
+        3) You confirm price + delivery
+      </p>
+      <hr />
+      <p class="small" style="margin:0">
+        Tip: add your Instagram link in Contact page.
+      </p>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <div class="section-title">
+    <h2>Featured products</h2>
+    <p>Replace images + text anytime</p>
+  </div>
+
+  <div class="grid">
+    <div class="card product">
+      <img src="images/product1.jpg" alt="Crochet product 1" />
+      <h3>Amigurumi Whale</h3>
+      <p class="price">Price: 25 TND • Made to order</p>
+      <a class="btn btn-primary" href="product.html?item=whale">View</a>
+    </div>
+
+    <div class="card product">
+      <img src="images/product2.jpg" alt="Crochet product 2" />
+      <h3>Granny Square</h3>
+      <p class="price">Price: 15 TND • Colors customizable</p>
+      <a class="btn btn-primary" href="product.html?item=granny">View</a>
+    </div>
+
+    <div class="card product">
+      <img src="images/product3.jpg" alt="Crochet product 3" />
+      <h3>Crochet Sample</h3>
+      <p class="price">Price: 20 TND • Handmade</p>
+      <a class="btn btn-primary" href="product.html?item=sample">View</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="y"></span> Handmade Crochet Store • Orders via WhatsApp/Instagram
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

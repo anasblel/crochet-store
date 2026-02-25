@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product • Handmade Crochet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container topbar">
+    <div class="brand">
+      <b>Handmade Crochet</b>
+      <span>Product</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="grid" style="grid-template-columns: 1fr 1fr; align-items:start">
+    <div class="card">
+      <img id="img" src="images/product1.jpg" alt="Product image" style="width:100%;border-radius:12px;border:1px solid var(--border);height:420px;object-fit:cover" />
+    </div>
+
+    <div class="card">
+      <h2 id="name" style="margin:0">Product Name</h2>
+      <p id="price" class="price" style="margin-top:10px">Price</p>
+      <p id="desc" style="color:var(--muted);margin-top:10px">
+        Description of your crochet product. Replace this text.
+      </p>
+
+      <hr />
+
+      <p class="small" style="margin:0 0 10px">
+        Production time: 1–3 days • Delivery: depends on city
+      </p>
+
+      <a id="wa" class="btn btn-primary" href="#" target="_blank" rel="noreferrer">
+        Order on WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="shop.html">Back to Shop</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="y"></span> Handmade Crochet Store
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // EDIT THIS: your WhatsApp number in international format (no +, no spaces)
+  const WHATSAPP_NUMBER = "21600000000";
+
+  // Simple product data (edit/add items here)
+  const products = {
+    whale: {
+      name: "Amigurumi Whale",
+      price: "25 TND",
+      img: "images/product1.jpg",
+      desc: "Handmade crochet whale. Soft yarn. Custom colors available."
+    },
+    granny: {
+      name: "Granny Square",
+      price: "15 TND",
+      img: "images/product2.jpg",
+      desc: "Classic granny square. Perfect for blankets & accessories."
+    },
+    sample: {
+      name: "Crochet Sample",
+      price: "20 TND",
+      img: "images/product3.jpg",
+      desc: "Handmade crochet piece. You can customize size and colors."
+    }
+  };
+
+  const params = new URLSearchParams(location.search);
+  const item = params.get("item") || "whale";
+  const p = products[item] || products.whale;
+
+  document.getElementById("name").textContent = p.name;
+  document.getElementById("price").textContent = "Price: " + p.price;
+  document.getElementById("desc").textContent = p.desc;
+  document.getElementById("img").src = p.img;
+
+  const message = encodeURIComponent(`Hi! I want to order: ${p.name} (${p.price}).`);
+  document.getElementById("wa").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+</script>
+
+</body>
+</html>

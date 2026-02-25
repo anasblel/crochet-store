@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop • Handmade Crochet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="container topbar">
+    <div class="brand">
+      <b>Handmade Crochet</b>
+      <span>Shop</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="section-title">
+    <h2>All products</h2>
+    <p>Copy-paste product cards to add more</p>
+  </div>
+
+  <div class="grid">
+    <!-- PRODUCT CARD (copy this block to add more) -->
+    <div class="card product">
+      <img src="images/product1.jpg" alt="Amigurumi Whale" />
+      <h3>Amigurumi Whale</h3>
+      <p class="price">25 TND • Made to order</p>
+      <a class="btn btn-primary" href="product.html?item=whale">View</a>
+    </div>
+
+    <div class="card product">
+      <img src="images/product2.jpg" alt="Granny Square" />
+      <h3>Granny Square</h3>
+      <p class="price">15 TND • Custom colors</p>
+      <a class="btn btn-primary" href="product.html?item=granny">View</a>
+    </div>
+
+    <div class="card product">
+      <img src="images/product3.jpg" alt="Crochet Sample" />
+      <h3>Crochet Sample</h3>
+      <p class="price">20 TND • Handmade</p>
+      <a class="btn btn-primary" href="product.html?item=sample">View</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="y"></span> Handmade Crochet Store
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
